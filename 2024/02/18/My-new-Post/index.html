@@ -59,15 +59,8 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<meta name="generator" content="Hexo 7.1.1"></head>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.1.1"></head>
-
-<head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
-</head>
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -327,9 +320,9 @@
             <div id="articleContent">
                 <h1 id="卷积神经网络中的卷积操作"><a href="#卷积神经网络中的卷积操作" class="headerlink" title="卷积神经网络中的卷积操作"></a>卷积神经网络中的卷积操作</h1><p>卷积神经网络（Convolutional Neural Networks，CNNs）是深度学习领域中一种特别流行的神经网络架构，它主要用于图像识别、图像分类、物体检测等任务。CNNs相较于传统的全连接神经网络，其最大的优势在于能够有效地提取图像的局部特征，从而在图像处理任务中取得显著的效果。</p>
 <h2 id="卷积操作的基本概念"><a href="#卷积操作的基本概念" class="headerlink" title="卷积操作的基本概念"></a>卷积操作的基本概念</h2><p>卷积操作是CNNs中的核心操作，其灵感来源于生物视觉系统。在数学上，卷积是一种积分运算，可以将一个函数（输入）通过与另一个函数（卷积核）的卷积，得到一个新的函数（输出）。在CNNs中，卷积操作用于提取图像的局部特征，如边缘、角点、纹理等。</p>
-<h3 id="卷积操作的数学定义"><a href="#卷积操作的数学定义" class="headerlink" title="卷积操作的数学定义"></a>卷积操作的数学定义</h3><p>假设有一个输入图像$X$，其尺寸为$W_1 \times H_1$，卷积核（也称为过滤器）$K$的尺寸为$W_2 \times H_2$。卷积操作可以定义为：</p>
+<h3 id="卷积操作的数学定义"><a href="#卷积操作的数学定义" class="headerlink" title="卷积操作的数学定义"></a>卷积操作的数学定义</h3><p>假设有一个输入图像 $X$ ，其尺寸为 $W_1 \times H_1$ ，卷积核（也称为过滤器） $K$ 的尺寸为 $W_2 \times H_2$ 。卷积操作可以定义为：</p>
 <p>$$(X * K)(x, y) &#x3D; \sum_{i&#x3D;1}^{W_2} \sum_{j&#x3D;1}^{H_2} X(i+x-1, j+y-1) \cdot K(i, j)$$</p>
-<p>其中，$*$表示卷积运算，$(X * K)(x, y)$表示在坐标$(x, y)$上的卷积结果。</p>
+<p>其中，$*$ 表示卷积运算，$(X * K)(x, y)$ 表示在坐标 $(x, y)$ 上的卷积结果。</p>
 <h3 id="卷积操作的物理意义"><a href="#卷积操作的物理意义" class="headerlink" title="卷积操作的物理意义"></a>卷积操作的物理意义</h3><p>在图像处理中，卷积核可以看作是一个小的感受野，它对输入图像的局部区域进行加权求和，得到一个新的特征值。卷积核的权重是通过训练得到的，它能够自适应地学习到图像中的局部特征。</p>
 <h2 id="卷积操作的实现"><a href="#卷积操作的实现" class="headerlink" title="卷积操作的实现"></a>卷积操作的实现</h2><p>在CNNs中，卷积操作通常使用特殊的卷积核来执行，这种卷积核称为卷积核数组（Convolutional Kernel Array）。卷积核数组是一个高度优化的硬件设备，它可以并行地计算多个卷积核的卷积结果，从而大大提高了卷积操作的效率。</p>
 <h3 id="卷积操作的参数"><a href="#卷积操作的参数" class="headerlink" title="卷积操作的参数"></a>卷积操作的参数</h3><p>卷积操作的参数主要包括：</p>
@@ -662,6 +655,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 
